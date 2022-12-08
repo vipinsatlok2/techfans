@@ -1,0 +1,24 @@
+<%- include("../../../partials/head.ejs") %>
+<%- include("../../../partials/header.ejs") %>
+
+    <div class="container">
+    <div class="row">
+        
+        <div class="col-xxl-8 col d-flex flex-column">
+            <form class="col-md-6 col d-xs-flex flex-column mt-4 p-2">
+               <h1 class="fs-2 mb-4">Letter Counter</h1>
+                <div class="mb-3">
+                    <textarea id="textarea" style="resize : none;" placeholder="Enter your text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="col input-group mb-3">
+                    <input id="input" type="text" class="form-control" value="" placeholder="Your total count here" Disabled aria-describedby="button-addon2">
+                    <button id="copyButton" class="btn btn-secondary" type="button" id="button-addon2">Copy</button>
+                </div>
+                <div class="col input-group">
+                   <button id="countButton" type="submit" class="btn btn-primary">Count total</button>
+                </div>
+            </form>
+        </div>
+</div>
+    
+<%- include("../../../partials/foot.ejs" , { src : "/js/tools/letter-counter.js" }) %>
